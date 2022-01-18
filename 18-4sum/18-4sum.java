@@ -21,7 +21,7 @@
                             n--;
                           //  System.out.println("i "+ i + "j "+ j + "m "+ m + "n "+n);
                             while (m < n && nums[m] == nums[m - 1]) {m++;}
-                          //  while (m<n  && nums[n] == nums[n + 1]) {n--;}
+                           while (m<n  && nums[n] == nums[n + 1]) {n--;}
 
                         } else if (sum < target) {
                             m++;
