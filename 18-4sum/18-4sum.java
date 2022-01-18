@@ -1,4 +1,5 @@
  class Solution {
+     // O(n^3)
         public List<List<Integer>> fourSum(int[] nums, int target) {
             List<List<Integer>> ans = new ArrayList<>();
 
