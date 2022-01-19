@@ -1,5 +1,15 @@
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
+        /**
+        n = number of words
+        m = avg length of a word
+        Time Complexity is O(n*mlogn)
+        
+        Instead of sorting, if we a frequency map like Map<Map<Char, Integer>, List<Integer>>
+        complexity will be redueced do  O(n*m*26)
+        
+        **/
+        
         Map<String, List<String>> map = new HashMap<>();
 
         List<List<String>> ans = new ArrayList<>();
