@@ -10,7 +10,7 @@ class Solution {
             while(oddPointer<len&& nums[oddPointer]%2!=0)
                 oddPointer+=2;
             
-            if(evenPointer<len && nums[evenPointer]%2!=0 || oddPointer<len&& nums[oddPointer]%2==0){
+            if(evenPointer<len && oddPointer<len){
                 swap(nums, evenPointer, oddPointer);
             }
         }
