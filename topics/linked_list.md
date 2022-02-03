@@ -1,13 +1,16 @@
-[Merge two sorted linked lists][https://leetcode.com/problems/merge-two-sorted-lists/]
+ ### [Merge two sorted linked lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
-## Approach
+#### Approach
 1. Maintain a dummy pointer to the head.
 2. Take two pointers to both the lists
 3. Append the node whichever is smaller
 
-Source Code
 
-```
+Time complexity : O(n+m)
+
+Space complexity : O(1)
+
+```java
 /**
  * Definition for singly-linked list.
  * public class ListNode {
