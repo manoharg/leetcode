@@ -46,3 +46,7 @@ class Solution {
 }
 ```
 
+Palindrome linked list
+Odd even linked list
+Reverse linked list  between m and n
+Reverse linked list in groups of k
