@@ -54,4 +54,8 @@ Reverse linked list  between m and n
 
 Reverse linked list in groups of k
 
+Copy list with random pointer
+
+Remove elements in sorted list 1,11
+
 
