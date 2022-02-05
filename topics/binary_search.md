@@ -26,3 +26,6 @@ Problems
 Template is not good. Go through Erichto's video and solve problems.
 
 https://leetcode.com/explore/learn/card/binary-search/125/template-i/950/
+
+Search in rotated sorted array with duplicates 
+
