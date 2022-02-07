@@ -8,13 +8,15 @@ class Solution {
 
         // search in rotated sorted array with distinct values
         while (l <= r) {
+            while(l<r && nums[l]==nums[r]) l++;
+            
             int m = l + (r - l) / 2;
             if (nums[m] == target) return true;
 
             // [1,2,1,1,1]
-            while (l < m && nums[l] == nums[m]) l++;
+            //while (l < m && nums[l] == nums[m]) l++;
 
-            while (m < r && nums[m] == nums[r]) r--;
+            //while (m < r && nums[m] == nums[r]) r--;
 
             // [1,2,1,1,1]  -> left part is not sorted but as per my logic it says that its sorted
             // which is wrong.
