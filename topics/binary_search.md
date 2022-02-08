@@ -29,3 +29,7 @@ https://leetcode.com/explore/learn/card/binary-search/125/template-i/950/
 
 Search in rotated sorted array with duplicates 
 
+Heater problem - Read about Arrays.binarySearch() and Collections.binraySearch()
+
+Find K closest elements - https://www.youtube.com/watch?v=ZZmIVlgDIlQ&ab_channel=RenZhang
+
