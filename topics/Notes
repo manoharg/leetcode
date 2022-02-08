@@ -1,0 +1,52 @@
+DS and Algorithms
+Books
+1.	Algorithms (4e) - Robert Sedgewick
+2.	The Algorithm Design Manual - Skienna
+3.	Elements of Programming Interview - Adnan Aziz
+4.	Distributed systems: http://book.mixu.net/distsys/single-page.html
+5.	DSA-revision-guide-30DaysCoding.pdf
+Tips and tricks:
+1.	Convert a String  to char array and vice versa, reverse a string using stringbuilder insert method
+2.	Clear a StringBuilder using setLength(0) or delete(0, sb.length())
+3.	Remove trailing zeros from a string, Character.isDigit()
+4.	Convert arrayList to arr[] . use .toArray(new String[ans.size]);
+Sort an array of objects by frequency
+Questions:
+•	https://leetcode.com/problems/sort-characters-by-frequency/discuss/93445/O(n)-Easy-to-understand-Java-Solution
+•	347 Top K Frequent Elements
+•	692 Top K Frequent Words
+Patterns:
+1.	Customer sort
+2.	Bucket sort
+3.	Heaps/TreeMaps
+4.	Array where index is the frequency
+
+5.	Using comparable: A class implements comparable interface and overrides compareTo method. Returns -ve value if the object is less compared to the other specified object.
+6.	Comparator: override compare(Object first, Object second).  Arrays.sort(students, new Comparator<Student>(){
+@Override
+Public int compare(Student first, Student second){
+}
+}));
+public int[] frequencySort(int[] nums) {
+	Map<Integer, Integer> map = new HashMap<>();
+	// count frequency of each number
+	Arrays.stream(nums).forEach(n -> map.put(n, map.getOrDefault(n, 0) + 1));
+	// custom sort
+	return Arrays.stream(nums).boxed()
+			.sorted((a,b) -> map.get(a) != map.get(b) ? map.get(a) - map.get(b) : b - a)
+			.mapToInt(n -> n)
+			.toArray();
+}
+
+7.	Use collections.sort(list, comparator);
+8.	Read about treeMap
+
+
+Stack
+https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/ - Solve it using fast and slow pointer technique.
+
+Two pointer Technique
+https://leetcode.com/discuss/study-guide/1688903/solved-all-two-pointers-problems-in-100-days
+
+
+
