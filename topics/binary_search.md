@@ -31,5 +31,7 @@ Search in rotated sorted array with duplicates
 
 Heater problem - Read about Arrays.binarySearch() and Collections.binraySearch()
 
+Inbuilt binarySearch() returns +ve index if element is found else -(insertionPoint)-1. To get insertion point, do -(x+1) 
+
 Find K closest elements - https://www.youtube.com/watch?v=ZZmIVlgDIlQ&ab_channel=RenZhang
 
