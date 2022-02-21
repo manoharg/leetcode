@@ -55,5 +55,7 @@ https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/ - Solve 
 Two pointer Technique
 https://leetcode.com/discuss/study-guide/1688903/solved-all-two-pointers-problems-in-100-days
 
-
+String utils methods
+1. Character.isDigit()
+2. Character.toUpperCase()
 
