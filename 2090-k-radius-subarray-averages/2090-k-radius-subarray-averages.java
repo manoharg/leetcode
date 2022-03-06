@@ -11,8 +11,6 @@ class Solution {
         int i=0,j=0;
         long sum=0;
         int ws=2*k+1;
-        if(l<ws)
-            return ans;
         while(j<l){
             sum= sum+ nums[j];
            // System.out.println(j);
