@@ -10,13 +10,13 @@ class Solution {
                 j++;
             else if(j-i+1==k){
                // System.out.println("start "+ i+ " end "+j + "sum "+ sum);
-                double avg= sum*(1.0)/k;
-                ans= Math.max(ans,avg);
+                
+                ans= Math.max(ans,sum);
                 sum=sum-nums[i];
                 i++;
                 j++;
             }
         }
-        return ans;
+        return ans/k;
     }
 }
