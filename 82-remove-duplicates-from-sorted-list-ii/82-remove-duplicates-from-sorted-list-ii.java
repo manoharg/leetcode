@@ -21,18 +21,14 @@ class Solution {
         ListNode prev = dummy;
         ListNode cur = head;
         while (cur != null) {
-            boolean dup = false;
-            while (cur.next != null && cur.val == cur.next.val) {
-                dup = true;
+            while (cur.next != null && cur.next.val == prev.next.val) {
                 cur = cur.next;
             }
 
-            if (!dup) {
-                prev.next = cur;
-                prev = cur;
+            if (prev.next==cur) {
+                prev=prev.next;
             } else {
                 prev.next = cur.next;
-                // prev=cur.next;
             }
 
             // System.out.println(prev.val);
