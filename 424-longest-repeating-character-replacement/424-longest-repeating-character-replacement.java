@@ -11,7 +11,7 @@ class Solution {
         while(j<l){
             char ch=s.charAt(j);
             map.put(ch, map.getOrDefault(ch,0)+1);
-            alt= Math.max(alt, getMax(map));
+            alt= Math.max(alt, map.get(ch));
             int ws=j-i+1;
             if(ws-alt<=k){
                 ans = Math.max(ans, ws);
