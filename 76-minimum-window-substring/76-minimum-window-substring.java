@@ -10,6 +10,8 @@ class Solution {
         i = 0;
         while (j < l) {
             char ch = s.charAt(j);
+            // count indicates the need of characters
+    
             if (count > 0) {
                 if (map.containsKey(ch)) {
                     map.put(ch, map.get(ch) - 1);
@@ -17,8 +19,8 @@ class Solution {
                 }
             }
             
+            // need is met, shrink the window size by removing unncessary characters and keep on updating ans.
             while (count == 0) {
-                //  System.out.println(s.substring(i, j+1));
                 if (j - i + 1 < ans) {
                     ret = s.substring(i, j+1);
                     ans = j - i + 1;
@@ -36,24 +38,7 @@ class Solution {
 
             j++;
         }
-        // System.out.println(count);
-
-        // while (count == 0) {
-        //     //  System.out.println(s.substring(i, j));
-        //     char ch = s.charAt(i);
-        //     if (map.containsKey(ch)) {
-        //         map.put(ch, map.get(ch) + 1);
-        //         if (map.get(ch) == 1) {
-        //             count++;
-        //         }
-        //     }
-        //     if (j - i + 1 < ans) {
-        //         ret = s.substring(i, j);
-        //         ans = j - i + 1;
-        //     }
-        //     i++;
-        // }
-
+      
         return ans == Integer.MAX_VALUE ? "" : ret;
     }
 }
