@@ -13,14 +13,7 @@ class Solution {
                 j++;
             }
         }
-        //System.out.println(stack);
-        while(j<popped.length){
-            if(popped[j]!=stack.peek())
-                return false;
-            else
-                stack.pop();
-            j++;
-        }
+    
         if(stack.isEmpty())
             return true;
         return false;
