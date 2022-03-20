@@ -18,3 +18,5 @@ while(i<nums.length){
 
 }
 ```
+Problems:
+https://leetcode.com/problems/find-all-duplicates-in-an-array/
