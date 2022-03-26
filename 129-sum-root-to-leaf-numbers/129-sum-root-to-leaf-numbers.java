@@ -14,21 +14,24 @@
  * }
  */
 class Solution {
-    int sum=0;
+    int ans =0;
     public int sumNumbers(TreeNode root) {
-        sum=0;
-        helper(root, 0);
-        return sum;
+        ans =0;
+        helper(root,0);
+        return ans;
     }
-    void helper(TreeNode root, int s){
+    public void helper(TreeNode root, int  path){
         if(root==null)
             return;
-        s=s*10+root.val;
-        if(root.left==null&&root.right==null){
-            sum=sum+s;
+      
+        if(root.left==null&& root.right==null){
+        //    System.out.println(path);
+            path = path*10 + root.val;
+            ans = ans + path;
         }
-        helper(root.left, s);
-        helper(root.right, s);
-        s=s/10;
+        
+        helper(root.left, path*10+ root.val );
+        helper(root.right, path*10+root.val);
+       // No need to revert the calcualtion as its not passed by referencee.
     }
 }
