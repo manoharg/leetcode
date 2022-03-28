@@ -26,20 +26,11 @@ class Solution {
     }
 
     // return the sum of nodes of a tree with root.
-    private int helper(TreeNode root) {
-        if (root == null) return 0;
-        if (root.left == null && root.right == null) {
-            ans = Math.max(ans, root.val);
-            return root.val;
-        }
-
-        int left = helper(root.left);
-        int right = helper(root.right);
-
-        ans = Math.max(ans, Math.max(left + root.val, root.val));
-        ans = Math.max(ans, Math.max(right + root.val, root.val));
-        ans = Math.max(ans, left + right + root.val);
-        int x = Math.max(Math.max(left + root.val, root.val), Math.max(right + root.val, root.val));
-        return x;
+    private int helper(TreeNode node) {
+        if (node == null) return 0;
+        int left = Math.max(0, helper(node.left));
+        int right = Math.max(0, helper(node.right));
+        ans = Math.max(ans, left + right + node.val);
+        return Math.max(left, right) + node.val;
     }
 }
