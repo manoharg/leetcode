@@ -11,23 +11,23 @@ class Solution {
 
                 public int compare(pair a, pair b) {
                     if (a.freq == b.freq) {
-                        return a.word.compareTo(b.word);
+                        return b.word.compareTo(a.word);
                     }
-                    return b.freq - a.freq;
+                    return a.freq - b.freq;
                 }
             }
         );
         for (String w : map.keySet()) {
             pq.offer(new pair(w, map.get(w)));
-            // if (pq.size() > k) {
-            //     pq.poll();
-            // }
+            if (pq.size() > k) {
+                pq.poll();
+            }
         }
         List<String> res = new ArrayList<>();
         int i=0;
-        while (i<k&&!pq.isEmpty()) {
-            res.add((pq.poll()).word);
-            i++;
+        while (!pq.isEmpty()) {
+            res.add(0,(pq.poll()).word);
+    
         }
         //Collections.reverse(res);
         return res;
