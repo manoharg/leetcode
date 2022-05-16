@@ -1,5 +1,5 @@
 # First negative integer in every window of size k
-## Easy 
+##  Easy 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Given an array <strong>A[] </strong>of size <strong>N</strong> and a positive integer <strong>K</strong>, find the first negative integer for each and every window(contiguous subarray) of size <strong>K</strong>.</span></p>
 
