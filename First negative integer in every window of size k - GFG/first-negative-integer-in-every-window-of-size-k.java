@@ -62,10 +62,9 @@ class Compute {
             if(queue.isEmpty()){
                res[i++]=0; 
             }else {
+                res[i++]= queue.peek();
                 if(queue.peek()==A[start]){
-                    res[i++]= queue.poll();
-                }else{
-                    res[i++]= queue.peek();
+                   queue.poll();
                 }
             }
             start++;
