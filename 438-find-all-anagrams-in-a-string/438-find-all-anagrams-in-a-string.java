@@ -8,25 +8,26 @@ class Solution {
         
         int start =0;
         int end=0;
-        int k=p.length();
-        Map<Character,Integer> smap=new HashMap<>();
+        int ws=p.length();
+        int k=pmap.size();
         while(end<s.length()){
             char ch=s.charAt(end);
             if(pmap.containsKey(ch)){
-                smap.put(ch, smap.getOrDefault(ch,0)+1);
+                pmap.put(ch, pmap.get(ch)-1);
+                if(pmap.get(ch)==0)
+                    k--; // qunatitiy of one char is met
             }
-            if(end-start+1<k){
+            if(end-start+1<ws){
                 end++;
-            }else if(end-start+1==k){
-                if(smap.equals(pmap)){
+            }else if(end-start+1==ws){
+                if(k==0){
                     ans.add(start);
                 }
-                if(smap.containsKey(s.charAt(start))){
-                    int freq= smap.get(s.charAt(start));
-                    if(freq-1==0)
-                        smap.remove(s.charAt(start));
-                    else
-                        smap.put(s.charAt(start), freq-1);
+                if(pmap.containsKey(s.charAt(start))){
+                    int freq= pmap.get(s.charAt(start));
+                    if(freq+1==1)
+                        k++;
+                    pmap.put(s.charAt(start), freq+1);
                 }
                 start++;
                 end++;
