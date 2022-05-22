@@ -12,12 +12,11 @@ class Solution {
             char ch = s.charAt(j);
             // count indicates the need of characters
     
-            if (count > 0) {
                 if (map.containsKey(ch)) {
                     map.put(ch, map.get(ch) - 1);
                     if (map.get(ch) == 0) count--;
                 }
-            }
+            
             
             // need is met, shrink the window size by removing unncessary characters and keep on updating ans.
             while (count == 0) {
