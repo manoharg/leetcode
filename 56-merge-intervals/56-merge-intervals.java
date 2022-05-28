@@ -28,6 +28,6 @@ class Solution {
             }
         }
         ans.add(new int[]{ start, end });
-        return ans.toArray(new int[ans.size()][2]);
+        return ans.toArray(new int[1][2]);
     }
 }
