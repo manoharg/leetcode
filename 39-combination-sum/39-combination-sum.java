@@ -16,10 +16,10 @@ class Solution {
 
         if (arr[i] <= target) {
             temp.add(arr[i]);
-            target = target - arr[i];
-            helper(arr, i, n, target, temp, ret);
+            //target = target - arr[i];
+            helper(arr, i, n, target-arr[i], temp, ret);
             temp.remove(temp.size() - 1);
-            target = target + arr[i];
+           // target = target + arr[i];
         }
         helper(arr, i + 1, n, target, temp, ret);
     }
