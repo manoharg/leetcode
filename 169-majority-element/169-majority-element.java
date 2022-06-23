@@ -7,7 +7,7 @@ class Solution {
                 count++;
             else
                 count--;
-            if(count<0){
+            if(count==0){
                 count=1;
                 maj=nums[i];
             }
