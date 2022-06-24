@@ -6,7 +6,7 @@
  
  /*
  Try to find a pattern like TTTFFF and find the first False or last True.
- For rotated array, compare mid with last element
+ For rotated array, compare mid with last element. Because in rotated sorted array, there are two sorted arrays.
  For peak, compare mid with mid-1
  */
  
