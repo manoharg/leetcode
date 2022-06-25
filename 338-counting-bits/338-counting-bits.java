@@ -1,18 +1,18 @@
 class Solution {
     public int[] countBits(int n) {
      int[] ans = new int[n+1];
+        int offset =1;
         for(int i=0;i<=n;i++){
-            ans[i]= getbits(i);
+            if(i==0)
+            ans[i]=0;
+            else{
+                 if(i==offset<<1)
+                    offset=i;
+                ans[i] = 1+ans[i-offset];
+    
+            }
         }
         return ans;
     }
-    int getbits(int n){
-        int c =0;
-        while(n>0){
-            n=n&(n-1);
-            c++;
-        }
-        return c;
-            
-    }
+   
 }
