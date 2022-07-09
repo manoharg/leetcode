@@ -7,9 +7,11 @@ class Solution {
     public int maximumDetonation(int[][] bombs) {
         int n = bombs.length;
         Map<Integer, List<Integer>> graph = new HashMap<>();
+        // List<Integer>[] graph = new List[n];
+
         for(int i=0;i<n;i++)
             graph.put(i, new ArrayList<>());
-        boolean[] vis = new boolean[n];
+        
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 int[] x = bombs[i];
@@ -20,10 +22,17 @@ class Solution {
             }
         }
         
+//          for(int i = 0; i < bombs.length - 1; i++)//generate every pair
+//             for(int j = i + 1; j < bombs.length; j++) {
+//                 long dist = dist(bombs[i], bombs[j]);//distance between the bombs
+//                 if(dist <= 1l * bombs[i][2] * bombs[i][2]) adj[i].add(j);//make a edge from i to j 
+                
+//                 if(dist <= 1l * bombs[j][2] * bombs[j][2]) adj[j].add(i);//make a edge from j to i
+//             }
         int ans = 0;
         for(int i=0;i<n;i++){
-            vis = new boolean[n];
-            int x = dfs(graph, vis,i);
+            
+            int x = dfs(graph, new boolean[n],i);
             ans = Math.max(ans, x);
             
         }
