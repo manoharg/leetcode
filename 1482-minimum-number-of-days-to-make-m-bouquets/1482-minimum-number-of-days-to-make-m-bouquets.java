@@ -1,4 +1,5 @@
 class Solution {
+  // TC: O(N*log(M)) where n is the bloomDay length and m is [l,r] inclusive.
     public int minDays(int[] bloomDay, int m, int k) {
     
     int max = Integer.MIN_VALUE;
