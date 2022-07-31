@@ -3,9 +3,7 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         int n= s.length();
         for(int i=0;i<s.length();){
-            if(i<n-1&&same(s.charAt(i),s.charAt(i+1))){
-                i+=2;
-            }else if(sb.length()>0 && same(s.charAt(i), sb.charAt(sb.length()-1))){
+            if(sb.length()>0 && same(s.charAt(i), sb.charAt(sb.length()-1))){
                 sb.deleteCharAt(sb.length()-1);
                 i++;
             }else{
