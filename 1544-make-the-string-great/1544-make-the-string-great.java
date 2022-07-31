@@ -3,7 +3,9 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         int n= s.length();
         for(int i=0;i<s.length();){
-            if(sb.length()>0 && same(s.charAt(i), sb.charAt(sb.length()-1))){
+            if(sb.length()>0 && Math.abs(s.charAt(i) - sb.charAt(sb.length()-1)) == 32) {
+              // a - 97
+              // A - 65
                 sb.deleteCharAt(sb.length()-1);
                 i++;
             }else{
