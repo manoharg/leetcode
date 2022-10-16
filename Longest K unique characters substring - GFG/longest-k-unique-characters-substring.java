@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 // Initial Template for Java
 
 import java.io.*;
@@ -15,7 +15,8 @@ class GfG {
             System.out.println(obj.longestkSubstr(s, k));
         }
     }
-}// } Driver Code Ends
+}
+// } Driver Code Ends
 
 
 // User function Template for Java
@@ -23,28 +24,28 @@ class GfG {
 class Solution {
     public int longestkSubstr(String s, int k) {
         // code here
-        int i=0,j=0;
-        Map<Character,Integer> map = new HashMap<>();
-        int ans = Integer.MIN_VALUE;
-        int counter = map.size();
-        while(j<s.length()){
-            char ch = s.charAt(j);
+        Map<Character, Integer> map = new HashMap<>();
+        int start=0,end=0;
+        int need=k;
+        int ans = -1;
+        while(end<s.length()){
+            char ch = s.charAt(end);
             map.put(ch, map.getOrDefault(ch,0)+1);
             if(map.size()==k){
-                ans = Math.max(ans, j-i+1);
+                ans= Math.max(ans,end-start+1);
             }
-            while(map.size()>k) {
-                char start = s.charAt(i);
-                if(map.containsKey(start)) {
-                    map.put(start, map.get(start)-1);
-                    if(map.get(start)==0)
-                        map.remove(start);
-                    
-                }
-                i++;
+            while(map.size()>k){
+                char x=s.charAt(start);
+                map.put(x, map.get(x)-1);
+                if(map.get(x)==0)
+                    map.remove(x);
+                start++;        
             }
-            j++;
+            if(map.size()==k){
+                ans= Math.max(ans,end-start+1);
+            }
+           end++; 
         }
-        return ans==Integer.MIN_VALUE ? -1: ans;
+        return ans;
     }
 }
