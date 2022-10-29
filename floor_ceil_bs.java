@@ -9,7 +9,7 @@ class Solve {
     }
     int floor(int[] a,int n, int x){
         int l=0,r=n-1,m;
-        int ans =1;
+        int ans =-1;
         while(l<=r){
             m=l+(r-l)/2;
             if(a[m]<=x){
@@ -23,7 +23,7 @@ class Solve {
     }
     int ceil(int[] a,int n, int x){
         int l=0,r=n-1,m;
-        int ans =1;
+        int ans =-1;
         while(l<=r){
             m=l+(r-l)/2;
             if(a[m]>=x){
