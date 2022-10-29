@@ -5,7 +5,8 @@
  ```java
  
  /*
- Try to find a pattern like TTTFFF and find the first False or last True.
+ Try to find a pattern like TTTFFF and find the first False or last True. 
+ Check the below snippet of code. We try to get better ans instead of termiating.
  For rotated array, compare mid with last element. Because in rotated sorted array, there are two sorted arrays.
  For peak, compare mid with mid-1
  */
